@@ -1,0 +1,370 @@
+﻿body {
+	height: auto;
+}
+.stage {
+    position: absolute;
+	top: 0%;
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+.image {
+	margin: 30px auto 0;
+	opacity: 0;
+	border: 10px solid #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 8px #333;
+	transition: all 0.8s ease-out;
+}
+#pre, #next {
+	position: fixed;
+	top: 200px;
+	width: 50px;
+	height: 150px;
+	background: #ccc;
+	color: #333;
+	text-shadow: 0 1px 1px #fff;
+	font: bold 50px/150px Helvetica, Arial;
+    border-radius: 5px;	
+	box-shadow: 0 2px 3px #333;
+	cursor: pointer;
+	opacity: 0.2;
+	transition: all 0.5s ease-out;
+}
+#pre:hover, #next:hover {
+	opacity: 0.8;
+}
+#pre {
+	left: 5px;
+}
+#next {
+	right: 5px;
+}
+.box, .shortBox {	
+	position: relative;
+	overflow: hidden;
+	background: url(../images/box_bg.png) repeat;
+	transition: all 0.7s ease-out;
+}
+.box {
+	height: 550px;
+	margin: 30px;
+}
+.mask {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	height: 550px;
+	width: 100%;
+	z-index: 99;
+	display: none;
+}
+.lists, .shortLists {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	white-space: nowrap;
+	display: inline-block;
+	font-size: 0%;
+	transition: left 0.7s ease-out;
+}
+.list, .subList, .shortList {
+    position: relative;
+	height: 550px;
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: middle;
+	border-right: 1px dotted #fff;
+}
+.list:first-child{
+	background: rgba(255, 255, 255, 0.5);
+}
+.cover, .shortCover {
+	width: 450px;
+	height: 550px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.title {
+    height: 200px;
+	line-height: 200px;
+	text-align: center;
+	font-size: 50px;
+	color: #983230;
+	transition: all 0.3s ease-out;	
+}
+.list_exception {
+	width: 450px;
+}
+.list_exception > .title, .list:not(.list_exception):hover   .title, .shortList:hover .title, .shortBox:hover .shortHead {
+	color: #fff;
+}
+.detail {
+	padding: 50px;
+	color: #fff;
+	text-align: center;
+	font: 14px/1.5 Georgia, Times New Roman, Helvetica, Arial;
+	opacity: 0;
+	transition: all 0.3s ease-out;	
+}
+.list_exception > .detail, .list:not(.list_exception):hover   .detail {
+	opacity: 1;
+}
+.subLists {
+	font-size: 0%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.subList {
+    color: #000;
+	width: 0;
+	overflow: hidden;
+	border-right: none;
+	transition: all 0.5s ease-out;
+}
+.subList_check, .shortSubList_check {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 450px;
+	height: 550px;
+	opacity: 0;
+	cursor: pointer;
+}
+.subList_check:checked ~ .subLists  > .subList {
+	width: 150px;
+	border-left: 1px dotted #fff;
+}
+.subList_text, .shortSubList_text {
+	width: 150px;
+	height: 550px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;	
+	font: bold 20px Georgia, Times New Roman, Helvetica, Arial;
+}
+.subList_img, .shortSubList_img {
+	width: 150px;
+	height: 550px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	text-align: center;
+	color: #fff;	
+	font: bold 20px/550px Georgia, Times New Roman, Helvetica, Arial;
+	background-position: center center;
+	opacity: 0;
+	transition: all 0.3s linear;
+}
+.subList_img:hover, .shortSubList_img:hover {
+	opacity: 1;
+	background-color: #fff;
+}
+#lxy:hover, #lxy_s:hover {
+	background-image: url('../images/lxy.png');
+}
+#zle:hover, #zle_s:hover {
+	background-image: url('../images/zle.png');
+}
+#lyr:hover, #lyr_s:hover {
+	background-image: url('../images/lyr.png');
+}
+#an:hover, #an_s:hover {
+	background-image: url('../images/an.png');
+}
+
+#wxh:hover, #wxh_s:hover {
+	background-image: url('../images/wxh.png');
+}
+#sm:hover, #sm_s:hover {
+	background-image: url('../images/sm.png');
+}
+#sqs:hover, #sqs_s:hover {
+	background-image: url('../images/sqs.png');
+}
+#liyr:hover, #liyr_s:hover {
+	background-image: url('../images/liyr.png');
+}
+
+#jt:hover, #jt_s:hover {
+	background-image: url('../images/jt.png');
+}
+#txj:hover, #txj_s:hover {
+	background-image: url('../images/txj.png');
+}
+#llk:hover, #llk_s:hover {
+	background-image: url('../images/llk.png');
+}
+#hlk:hover, #hlk_s:hover {
+	background-image: url('../images/hlk.png');
+}
+#zx:hover, #zx_s:hover {
+	background-image: url('../images/zx.png');
+}
+#xcq:hover, #xcq_s:hover {
+	background-image: url('../images/xcq.png');
+}
+#cl:hover, #cl_s:hover {
+	background-image: url('../images/cl.png');
+}
+
+#ngh:hover, #ngh_s:hover {
+	background-image: url('../images/ngh.png');
+}
+#wh:hover, #wh_s:hover {
+	background-image: url('../images/wh.png');
+}
+#wpx:hover, #wpx_s:hover {
+	background-image: url('../images/wpx.png');
+}
+#xx:hover, #xx_s:hover {
+	background-image: url('../images/xx.png');
+}
+#lyg:hover, #lyg_s:hover {
+	background-image: url('../images/lyg.png');
+}
+
+#hls:hover, #hls_s:hover {
+	background-image: url('../images/hls.png');
+}
+#yth:hover, #yth_s:hover {
+	background-image: url('../images/yth.png');
+}
+#lml:hover, #lml_s:hover {
+	background-image: url('../images/lml.png');
+}
+#mrzy:hover, #mrzy_s:hover {
+	background-image: url('../images/mrzy.png');
+}
+
+#jyf:hover, #jyf_s:hover {
+	background-image: url('../images/jyf.png');
+}
+#tyr:hover, #tyr_s:hover {
+	background-image: url('../images/tyr.png');
+}
+#ly:hover, #ly_s:hover {
+	background-image: url('../images/ly.png');
+}
+#xm:hover, #xm_s:hover {
+	background-image: url('../images/xm.png');
+}
+
+#x:hover, #x_s:hover {
+	background-image: url('../images/x.png');
+}
+#xhjx:hover, #xhjx_s:hover {
+	background-image: url('../images/xhjx.png');
+}
+#mcl:hover, #mcl_s:hover {
+	background-image: url('../images/mcl.png');
+}
+#xcx:hover, #xcx_s:hover {
+	background-image: url('../images/xcx.png');
+}
+#jc:hover, #jc_s:hover {
+	background-image: url('../images/jc.png');
+}
+#hfz:hover, #hfz_s:hover {
+	background-image: url('../images/hfz.png');
+}
+#jl:hover, #jl_s:hover {
+	background-image: url('../images/jl.png');
+}
+#liy:hover, #liy_s:hover {
+	background-image: url('../images/liy.png');
+}
+#lb:hover, #lb_s:hover {
+	background-image: url('../images/lb.png');
+}
+#lm:hover, #lm_s:hover {
+	background-image: url('../images/lm.png');
+}
+
+#blts:hover, #blts_s:hover {
+	background-image: url('../images/blts.png');
+}
+#fqx:hover, #fqx_s:hover {
+	background-image: url('../images/fqx.png');
+}
+#fls:hover, #fls_s:hover {
+	background-image: url('../images/fls.png');
+}
+#xl:hover, #xl_s:hover {
+	background-image: url('../images/xl.png');
+}
+#yqs:hover, #yqs_s:hover {
+	background-image: url('../images/yqs.png');
+}
+#hy:hover, #hy_s:hover {
+	background-image: url('../images/hy.png');
+}
+#zy:hover, #zy_s:hover {
+	background-image: url('../images/zy.png');
+}
+
+#wry:hover, #wry_s:hover {
+	background-image: url('../images/wry.png');
+}
+#ywy:hover, #ywy_s:hover {
+	background-image: url('../images/ywy.png');
+}
+#ar:hover, #ar_s:hover {
+	background-image: url('../images/ar.png');
+}
+#xyz:hover, #xyz_s:hover {
+	background-image: url('../images/xyz.png');
+}
+.attachList {
+    width: 0;
+	height: 550px;
+	display: inline-block;
+	vertical-align: middle;
+	background: #fff;
+	opacity: 0.2;
+	transition: all 1.5s ease-in;
+}
+
+.shortBox, .shortHead {
+    position: fixed;
+    height: 200px;
+	width: 0px;
+	left: 50px;
+	bottom: 30px; 
+	transition: all 0.5s ease-out;
+}
+.shortBox:hover {
+	width: 100%;
+}
+.shortHead {
+	left: 0;
+	z-index: 99;
+	width: 50px;
+	text-align: center;
+	font: bold 20px/200px Georgia, Times New Roman, Helvetica, Arial;
+	background: url(../images/box_bg.png) repeat;
+	color: #983230;
+	border-right: 1px dotted #fff;
+	transition: all 0.3s ease-out;
+}
+.shortList, .shortCover, .shortSubList_check, .shortSubList, .shortSubList_text, .shortSubList_img  {
+	height: 200px;
+	font-size: 16px;
+}
+.shortSubList_text {
+	width: 55px;
+}
+.shortSubList_check:checked ~ .subLists  > .subList {
+	width: 55px;
+	border-left: 1px dotted #fff;
+}
+.shortSubList_img {
+	width: 55px;
+	line-height: 200px;
+	background-size: 150px;
+}
+.w0 {
+	width: 0px !important;
+}

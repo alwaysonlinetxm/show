@@ -1,0 +1,97 @@
+﻿@charset "utf-8";
+/** ------------------------------------------------------------------------------
+* TBase
+* @version 1.0
+* @explain 底层基础样式，以及功能类样式
+* @author  alwaysonlinetxm
+* @email   txm19921005@126.com
+* --------------------------------------------------------------------------------
+*/
+
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, pre, code, object, iframe, strong, em,
+form, fieldset, label, legend, input, button, select, textarea, 
+p, blockquote, span, a, img, address, abbr, acronym, /* 缩写标签 */
+table, caption, tbody, tfoot, thead, tr, th, td, 
+article , aside, details, figcaption, figure,
+footer, header, hgroup, nav, section, 
+canvas, video, audio {
+    margin: 0;
+    padding: 0;
+}
+/* 当html和body同时设置为100%时，允许body的子元素能有100%的height */
+html {
+	height: 100%; 
+}
+/* 全局字体 */
+body {
+	height: 100%;
+	font: 12px/1.5 Helvetica,arial,sans-serif;
+}
+/* 除去连接下划线 */
+a {
+    text-decoration: none;
+	color: #000;
+	cursor: pointer;
+}
+/* 除去列表样式 */
+ul,li,ol{
+	list-style: none outside none;
+}
+/*去除表单默认样式*/
+input,button,select,textarea {
+    outline:none;
+}
+button, input[type="submit"], input[type="button"] {
+	cursor: pointer;
+}
+textarea {
+    resize: none;
+	overflow:auto; /* IE下去除默认的滚动框 */
+}
+/* 取消单元格间距 */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th {
+	font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%; /* 为了继承父元素的字体大小以去除预设大小 */
+	font-weight: normal;
+}
+fieldset, img {
+    border: 0;
+}
+abbr, acronym {
+    border: 0;
+    font-variant: normal; /* font-variant 属性设置小型大写字母的字体显示文本 */
+}
+address, caption, code, em, strong, th {
+    font-style: inherit;
+    font-weight: inherit;
+}
+/* html5 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section {
+	display: block;
+}
+/* 修正旧版浏览器未定义inline-block的缺陷 */
+audio[controls], canvas, video {
+ display: inline-block;
+ *display: inline;
+ *zoom: 1;
+}
+/*清除浮动*/
+.TClearfix:before,
+.TClearfix:after {
+  content: "";
+  display: table;
+}
+.TClearfix:after {
+  clear: both;
+}
+.TClearfix {
+  *zoom: 1;
+}
